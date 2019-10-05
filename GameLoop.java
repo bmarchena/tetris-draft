@@ -2,12 +2,12 @@ import java.awt.*;
 
 public class GameLoop extends GameBase {
 
-    LineBlock testBlock;
+    TBlock testBlock;
 
     @Override
     public void initialize() {
 
-        testBlock = new LineBlock(200, 200, 0);
+        testBlock = new TBlock(200, 200, 0);
 
     }
 
