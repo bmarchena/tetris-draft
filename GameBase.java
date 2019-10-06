@@ -66,12 +66,7 @@ public abstract class GameBase extends Applet implements Runnable, KeyListener, 
 	public void keyReleased(KeyEvent e)
 	{
 		pressed[e.getKeyCode()] = true;
-		try {
-			t.sleep(15);
-			pressed[e.getKeyCode()] = false;
-		} catch (InterruptedException ex) {
-			ex.printStackTrace();
-		}
+
 	}
 
 	

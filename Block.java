@@ -47,9 +47,12 @@ public class Block {
         int[] xp = new int[4];
         int[] yp = new int[4];
 
-        double radians = angle * Math.PI / 180;
-        double cosA = Math.cos(radians);
-        double sinA = Math.sin(radians);
+        if(angle >= 360) angle -= 360;
+        if(angle < 0)    angle += 360;
+
+        double cosA = Lookup.cos[angle];
+        double sinA = Lookup.sin[angle];
+
 
         for(int i = 0; i < 4; i ++)
         {
