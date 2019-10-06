@@ -11,7 +11,7 @@ public class GameLoop extends GameBase {
     @Override
     public void initialize() {
 
-        testBlock = new SqBlock(500, 200, 0);
+        testBlock = new SqBlock(475, 175, 0);
 
     }
 
@@ -19,12 +19,13 @@ public class GameLoop extends GameBase {
     public void inTheGameLoop() {
 
         count++;
-        if(count==60){testBlock.moveDn(15); count=0;}
+        if(count==45){testBlock.moveDn(10); count=0;}
 
-        if(pressed[LT]){testBlock.moveLt(50); pressed[LT] = false;}
-        if(pressed[RT]){testBlock.moveRt(50); pressed[RT] = false;}
-        if(pressed[DN]){testBlock.moveDn(10); pressed[DN] = false;}
-        if(pressed[SP]){testBlock.rotate();       pressed[SP] = false;}
+        if(released[LT]){testBlock.moveLt(50); released[LT] = false;}
+        if(released[RT]){testBlock.moveRt(50); released[RT] = false;}
+        if(released[DN]){testBlock.moveDn(10); released[DN] = false;}
+        if(released[SP]){testBlock.rotate();       released[SP] = false;}
+
 
     }
 

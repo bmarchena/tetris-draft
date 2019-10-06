@@ -16,11 +16,11 @@ public class Arena {
         ltSide.draw(g);
         rtSide.draw(g);
         bottom.draw(g);
+        g.drawString("¡TETRIS!",500, 50);
     }
 
-    public boolean overlaps(Block block){
-        
-
-    }
+//    public boolean overlaps(Block b){
+//
+//    }
 
 }

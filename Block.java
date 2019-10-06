@@ -36,9 +36,9 @@ public class Block {
 
     public void rotate(){angle -= 90;}
 
-    public void moveLt(int dx){ x -= dx;}
+    public void moveLt(int dx){ if(x>275) x -= dx;}
 
-    public void moveRt(int dx){ x += dx;}
+    public void moveRt(int dx){ if(x<675) x += dx;}
 
     public void moveDn(int dy){ y += dy;}
 
@@ -89,6 +89,7 @@ public class Block {
 
         g.drawPolygon(xp, yp, 4);
 
+        g.drawLine((int)x - 25,(int)y -25,(int)x,(int)y);
 
     }
 

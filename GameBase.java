@@ -5,7 +5,6 @@ public abstract class GameBase extends Applet implements Runnable, KeyListener, 
 {
 	Thread t;
 		
-	public static final int UP = KeyEvent.VK_UP;
 	public static final int DN = KeyEvent.VK_DOWN;
 	public static final int LT = KeyEvent.VK_LEFT;
 	public static final int RT = KeyEvent.VK_RIGHT;
@@ -16,7 +15,7 @@ public abstract class GameBase extends Applet implements Runnable, KeyListener, 
 	public static final int _3 = KeyEvent.VK_3;
 	public static final int _4 = KeyEvent.VK_4;
 	
-	boolean[] pressed = new boolean[1024];
+	boolean[] released = new boolean[1024];
 	
 	
 	public abstract void initialize();
@@ -65,7 +64,7 @@ public abstract class GameBase extends Applet implements Runnable, KeyListener, 
 	
 	public void keyReleased(KeyEvent e)
 	{
-		pressed[e.getKeyCode()] = true;
+		released[e.getKeyCode()] = true;
 
 	}
 
