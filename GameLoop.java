@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class GameLoop extends GameBase {
 
-    SqBlock testBlock;
+    LineBlock testBlock;
     int count = 0;
 
 
@@ -11,7 +11,7 @@ public class GameLoop extends GameBase {
     @Override
     public void initialize() {
 
-        testBlock = new SqBlock(475, 175, 0);
+        testBlock = new LineBlock(475, 175, 0);
 
     }
 
@@ -19,7 +19,7 @@ public class GameLoop extends GameBase {
     public void inTheGameLoop() {
 
         count++;
-        if(count==45){testBlock.moveDn(10); count=0;}
+        if(count==60){testBlock.moveDn(50); count=0;}
 
         if(released[LT]){testBlock.moveLt(50); released[LT] = false;}
         if(released[RT]){testBlock.moveRt(50); released[RT] = false;}
@@ -32,7 +32,7 @@ public class GameLoop extends GameBase {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        testBlock.draw(g);
         arena.draw(g);
+        testBlock.draw(g);
     }
 }
