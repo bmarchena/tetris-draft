@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class GameLoop extends GameBase {
 
-    LineBlock testBlock;
+    LBlock testBlock;
     int count = 0;
 
 
@@ -11,7 +11,7 @@ public class GameLoop extends GameBase {
     @Override
     public void initialize() {
 
-        testBlock = new LineBlock(475, 175, 0);
+        testBlock = new LBlock(475, 175, 0);
 
     }
 
